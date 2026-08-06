@@ -30,15 +30,18 @@ class GlassBottomNavigationBar extends StatelessWidget {
           color: color,
           borderRadius: BorderRadius.circular(32),
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
+            padding:
+                const EdgeInsets.symmetric(horizontal: 16.0, vertical: 8.0),
             child: Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: List.generate(items.length, (index) {
                 final item = items[index];
                 final isSelected = index == currentIndex;
                 final theme = Theme.of(context);
-                final iconColor = isSelected ? theme.primaryColor : theme.unselectedWidgetColor;
-                
+                final iconColor = isSelected
+                    ? theme.primaryColor
+                    : theme.unselectedWidgetColor;
+
                 return GestureDetector(
                   onTap: () => onTap?.call(index),
                   behavior: HitTestBehavior.opaque,
@@ -46,12 +49,16 @@ class GlassBottomNavigationBar extends StatelessWidget {
                     duration: const Duration(milliseconds: 250),
                     padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
-                      color: isSelected ? theme.primaryColor.withOpacity(0.15) : Colors.transparent,
+                      color: isSelected
+                          ? theme.primaryColor.withOpacity(0.15)
+                          : Colors.transparent,
                       borderRadius: BorderRadius.circular(24),
                     ),
                     child: IconTheme(
                       data: IconThemeData(color: iconColor, size: 24),
-                      child: isSelected ? (item.activeIcon ?? item.icon) : item.icon,
+                      child: isSelected
+                          ? (item.activeIcon ?? item.icon)
+                          : item.icon,
                     ),
                   ),
                 );

@@ -60,7 +60,7 @@ class GlassContainer extends StatelessWidget {
               color: baseColor.withOpacity(opacity),
               borderRadius: defaultBorderRadius,
               border: Border.all(
-                color: isDark 
+                color: isDark
                     ? const Color(0xFF2C3742).withOpacity(opacity + 0.3)
                     : const Color(0xFFE7ECF1).withOpacity(opacity + 0.5),
                 width: 1.0,
