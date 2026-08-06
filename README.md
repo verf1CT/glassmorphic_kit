@@ -4,7 +4,6 @@
 
 **A premium, beautiful glassmorphism UI kit for Flutter.**
 
-[![Pub Version](https://img.shields.io/pub/v/glassmorphic_kit?style=for-the-badge&color=02569B)](https://pub.dev/packages/glassmorphic_kit)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
 
 </div>
