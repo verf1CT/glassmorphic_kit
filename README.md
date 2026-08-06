@@ -1,57 +1,53 @@
-<div align="center">
+# 🔮 Glassmorphic Kit
 
-# 🪟 Glassmorphic Kit
+![Pub Version](https://img.shields.io/pub/v/glassmorphic_kit?color=blue)
+![License](https://img.shields.io/badge/license-MIT-blue.svg)
+![Flutter](https://img.shields.io/badge/flutter-supported-02569B?logo=flutter)
 
-**A premium, beautiful glassmorphism UI kit for Flutter.**
+A premium Flutter UI kit for implementing beautiful, high-performance glassmorphism effects in your applications. 
 
-[![Pub Version](https://img.shields.io/pub/v/glassmorphic_kit?style=for-the-badge&color=02569B)](https://pub.dev/packages/glassmorphic_kit)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg?style=for-the-badge)](LICENSE)
+This package comes with a **[Figma Plugin](https://github.com/verf1CT/glassmorphic_kit/tree/main/figma-plugin)** that allows designers and developers to instantly convert Figma glass layers into ready-to-use Dart code!
 
-</div>
-
-Create stunning iOS-like blurred interfaces in seconds. `glassmorphic_kit` provides ready-to-use widgets like `GlassCard` and `GlassContainer` with perfect blur, transparency, and borders.
+## ✨ Features
+* **AnimatedGlassContainer:** Beautiful frosted glass containers with implicit animations.
+* **GlassBottomNavigationBar:** A modern, translucent navigation bar with glowing active states.
+* **Figma Plugin Integration:** Generate the exact border radiuses, opacities, and blur amounts directly from your design files.
+* **Highly Customizable:** Control blur intensity, gradients, borders, and noise texture.
 
 ## 🚀 Installation
 
-Add to your `pubspec.yaml`:
-
+Add the dependency to your `pubspec.yaml`:
 ```yaml
 dependencies:
   glassmorphic_kit: ^1.0.0
 ```
 
-## 🛠️ Usage
+## 💻 Usage
 
-### Basic GlassCard
 ```dart
 import 'package:glassmorphic_kit/glassmorphic_kit.dart';
 
-GlassCard(
-  blur: 20,
-  opacity: 0.15,
-  borderRadius: BorderRadius.circular(16),
-  child: const Padding(
-    padding: EdgeInsets.all(24),
-    child: Text(
-      'Premium Card',
-      style: TextStyle(color: Colors.white, fontSize: 24),
-    ),
+AnimatedGlassContainer(
+  width: 300,
+  height: 200,
+  blur: 15.0,
+  opacity: 0.2,
+  borderOpacity: 0.5,
+  borderRadius: BorderRadius.circular(24),
+  gradient: LinearGradient(
+    colors: [
+      Colors.white.withOpacity(0.2),
+      Colors.white.withOpacity(0.05),
+    ],
   ),
-)
+  child: Center(
+    child: Text('Premium Glassmorphism', style: TextStyle(color: Colors.white)),
+  ),
+);
 ```
 
-### Custom GlassContainer
-```dart
-GlassContainer(
-  blur: 30,
-  opacity: 0.1,
-  color: Colors.blueAccent, // Base tint color
-  child: YourWidget(),
-)
-```
+## 🎨 Figma Plugin
+Want to skip manually typing parameters? Use our **Glassmorphic Kit Figma Plugin** (found in the `figma-plugin` folder) to instantly extract Dart code from your designs!
 
 ## 🤝 Contributing
-Contributions, issues, and feature requests are welcome!
-
-## 📄 License
-This project is MIT licensed.
+Contributions are welcome! Feel free to open an issue or submit a pull request.
