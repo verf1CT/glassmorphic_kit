@@ -50,7 +50,7 @@ class GlassBottomNavigationBar extends StatelessWidget {
                     padding: const EdgeInsets.all(12),
                     decoration: BoxDecoration(
                       color: isSelected
-                          ? theme.primaryColor.withOpacity(0.15)
+                          ? theme.primaryColor.withValues(alpha: 0.15)
                           : Colors.transparent,
                       borderRadius: BorderRadius.circular(24),
                     ),

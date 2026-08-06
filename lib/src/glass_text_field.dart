@@ -48,7 +48,7 @@ class _GlassTextFieldState extends State<GlassTextField> {
         boxShadow: _isFocused
             ? [
                 BoxShadow(
-                  color: Theme.of(context).primaryColor.withOpacity(0.3),
+                  color: Theme.of(context).primaryColor.withValues(alpha: 0.3),
                   blurRadius: 20,
                   spreadRadius: 2,
                 )
@@ -61,12 +61,12 @@ class _GlassTextFieldState extends State<GlassTextField> {
           filter: ImageFilter.blur(sigmaX: widget.blur, sigmaY: widget.blur),
           child: Container(
             decoration: BoxDecoration(
-              color: Colors.white.withOpacity(widget.opacity),
+              color: Colors.white.withValues(alpha: widget.opacity),
               borderRadius: BorderRadius.circular(16),
               border: Border.all(
                 color: _isFocused
                     ? Theme.of(context).primaryColor
-                    : Colors.white.withOpacity(0.2),
+                    : Colors.white.withValues(alpha: 0.2),
                 width: 1.5,
               ),
             ),
@@ -77,7 +77,7 @@ class _GlassTextFieldState extends State<GlassTextField> {
               style: const TextStyle(color: Colors.white),
               decoration: InputDecoration(
                 hintText: widget.hintText,
-                hintStyle: TextStyle(color: Colors.white.withOpacity(0.6)),
+                hintStyle: TextStyle(color: Colors.white.withValues(alpha: 0.6)),
                 border: InputBorder.none,
                 contentPadding:
                     const EdgeInsets.symmetric(horizontal: 20, vertical: 16),

@@ -85,12 +85,12 @@ class _AnimatedGlassContainerState
           child: Container(
             padding: widget.padding,
             decoration: BoxDecoration(
-              color: currentColor.withOpacity(currentOpacity),
+              color: currentColor.withValues(alpha: currentOpacity),
               borderRadius: defaultBorderRadius,
               border: Border.all(
                 color: isDark
-                    ? const Color(0xFF2C3742).withOpacity(currentOpacity + 0.3)
-                    : const Color(0xFFE7ECF1).withOpacity(currentOpacity + 0.5),
+                    ? const Color(0xFF2C3742).withValues(alpha: currentOpacity + 0.3)
+                    : const Color(0xFFE7ECF1).withValues(alpha: currentOpacity + 0.5),
                 width: 1.0,
               ),
             ),

@@ -6,7 +6,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({Key? key}) : super(key: key);
+  const MyApp({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -24,7 +24,7 @@ class MyApp extends StatelessWidget {
 }
 
 class PlaygroundPage extends StatefulWidget {
-  const PlaygroundPage({Key? key}) : super(key: key);
+  const PlaygroundPage({super.key});
 
   @override
   State<PlaygroundPage> createState() => _PlaygroundPageState();
@@ -69,7 +69,7 @@ class _PlaygroundPageState extends State<PlaygroundPage> {
                           style: TextStyle(
                             fontSize: 24,
                             fontWeight: FontWeight.bold,
-                            color: Colors.white.withOpacity(0.9),
+                            color: Colors.white.withValues(alpha: 0.9),
                           ),
                         ),
                       ),
@@ -136,7 +136,7 @@ class _PlaygroundPageState extends State<PlaygroundPage> {
                       GlassDatePicker(
                         initialDate: DateTime.now(),
                         onDateSelected: (date) {
-                          print('Selected: \$date');
+                          debugPrint('Selected: \$date');
                         },
                       ),
                       const SizedBox(height: 32),
