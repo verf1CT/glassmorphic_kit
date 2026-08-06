@@ -16,9 +16,7 @@ class MyApp extends StatelessWidget {
         primarySwatch: Colors.blue,
         brightness: Brightness.light,
       ),
-      darkTheme: ThemeData(
-        brightness: Brightness.dark,
-      ),
+      darkTheme: ThemeData(brightness: Brightness.dark),
       themeMode: ThemeMode.dark,
       home: const PlaygroundPage(),
     );
@@ -87,14 +85,19 @@ class _PlaygroundPageState extends State<PlaygroundPage> {
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      const Text('Playground Controls',
-                          style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold)),
+                      const Text(
+                        'Playground Controls',
+                        style: TextStyle(
+                          color: Colors.white,
+                          fontSize: 20,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
                       const SizedBox(height: 32),
-                      const Text('Blur',
-                          style: TextStyle(color: Colors.white70)),
+                      const Text(
+                        'Blur',
+                        style: TextStyle(color: Colors.white70),
+                      ),
                       Slider(
                         value: _blur,
                         min: 0,
@@ -102,8 +105,10 @@ class _PlaygroundPageState extends State<PlaygroundPage> {
                         onChanged: (val) => setState(() => _blur = val),
                       ),
                       const SizedBox(height: 16),
-                      const Text('Opacity',
-                          style: TextStyle(color: Colors.white70)),
+                      const Text(
+                        'Opacity',
+                        style: TextStyle(color: Colors.white70),
+                      ),
                       Slider(
                         value: _opacity,
                         min: 0,
@@ -111,8 +116,10 @@ class _PlaygroundPageState extends State<PlaygroundPage> {
                         onChanged: (val) => setState(() => _opacity = val),
                       ),
                       const SizedBox(height: 16),
-                      const Text('Border Radius',
-                          style: TextStyle(color: Colors.white70)),
+                      const Text(
+                        'Border Radius',
+                        style: TextStyle(color: Colors.white70),
+                      ),
                       Slider(
                         value: _radius,
                         min: 0,
@@ -121,9 +128,10 @@ class _PlaygroundPageState extends State<PlaygroundPage> {
                       ),
                       const SizedBox(height: 24),
                       GlassTextField(
-                          hintText: 'Enter text here...',
-                          blur: _blur,
-                          opacity: _opacity),
+                        hintText: 'Enter text here...',
+                        blur: _blur,
+                        opacity: _opacity,
+                      ),
                       const SizedBox(height: 16),
                       GlassDatePicker(
                         initialDate: DateTime.now(),
@@ -138,7 +146,7 @@ class _PlaygroundPageState extends State<PlaygroundPage> {
                         onPressed: () {
                           // Copy code action mock
                         },
-                      )
+                      ),
                     ],
                   ),
                 ),

@@ -56,9 +56,7 @@ class GlassBottomNavigationBar extends StatelessWidget {
                     ),
                     child: IconTheme(
                       data: IconThemeData(color: iconColor, size: 24),
-                      child: isSelected
-                          ? (item.activeIcon ?? item.icon)
-                          : item.icon,
+                      child: isSelected ? item.activeIcon : item.icon,
                     ),
                   ),
                 );
